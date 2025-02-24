@@ -39,3 +39,21 @@ new_deck .all_cards[0]
 print(new_deck .all_cards[0])
 #for card in new_deck.all_cards :
     #print(card)
+
+
+class  Player:
+    def __init__(self,name):
+        self.name= name
+        self.all_cards= []
+    def remove(self):
+        return self.all_cards.pop(0)
+    def add(self,new_cards):
+        if len(new_cards) ==1:
+            self.all_cards.append(new_cards)
+        else:
+            self.all_cards.extend(new_cards)
+    def __str__(self):
+        return f'Player {self.name} has {(len(self.all_cards))} cards'        
+
+new_player= Player("neha")
+print(new_player)
